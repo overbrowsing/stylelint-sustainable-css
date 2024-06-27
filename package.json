@@ -1,0 +1,14 @@
+{
+  "name": "stylelint-sustainable-css",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Headless Horse and printer_scanner",
+  "license": "MIT",
+  "description": "TODO ADD DESCRIPTION",
+  "dependencies": {
+    "stylelint": "^16.6.1"
+  }
+}
