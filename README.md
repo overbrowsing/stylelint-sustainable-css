@@ -2,21 +2,22 @@
 
 ## Every Byte Counts
 
-Sustainable CSS is a Stylelint plugin dedicated to sustainable web design principles. It optimises CSS by identifying and addressing issues that contribute to larger file sizes, thereby helping conserving environmental resources.
+Sustainable CSS is a [Stylelint](https://stylelint.io) plugin dedicated to following [sustainable web design](https://sustainablewebdesign.org) principles. The plugin optimises CSS by identifying and addressing issues that contribute to larger file sizes, thereby helping conserve environmental resources.
 
 While many style guides are subjective regarding appearance, our core principle is simple: "Does it save bytes?"
 
-## Rules
+## Rules Documentation
 
-You can find all the rules for the plugin in this document, complete with examples and explanations/evidence for each.
+You can find all the rules for the plugin in the [rules document](https://github.com/printerscanner/stylelint-sustainable-css/blob/main/docs/rules.md), complete with examples and explanations for each.
 
 ## Results
 
-We plan to showcase detailed before and after results from live websites to illustrate the impact of our efforts. These examples will demonstrate how small optimisations in CSS can lead to significant environmental savings, highlighting the practical benefits of adopting sustainable web design practices. We’d love to hear about your experiences and results using our plugin. Please feel free to [email us](mailto:research@headless.horse).
-
+We plan to showcase detailed before and after results from live websites to illustrate the impact of this plugin. These examples will demonstrate how small optimisations in CSS can lead to significant environmental savings, highlighting the practical benefits of adopting sustainable web design practices. We’d love to hear about your experiences and results using our plugin. Please feel free to [email us](mailto:research@headless.horse).
 
 ## Repository Structure
 ```bash
+docs
+  └── rules.md          # The plugin rules documentation
 lib
   └── index.js          # The plugin implementation
 example
