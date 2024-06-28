@@ -1,17 +1,30 @@
-### Stylelint Sustainable CSS Plugin
+# **Sustainable CSS — Stylelint Plugin**
 
-This repository contains a Stylelint plugin designed to enforce sustainable CSS practices by checking for various common issues in CSS code. This README will guide you on how to test the plugin.
+## Every Byte Counts
+
+Sustainable CSS is a Stylelint plugin dedicated to sustainable web design principles. It optimises CSS by identifying and addressing issues that contribute to larger file sizes, thereby helping conserving environmental resources.
+
+While many style guides are subjective regarding appearance, our core principle is simple: "Does it save bytes?"
+
+## Rules
+
+You can find all the rules for the plugin in this document, complete with examples and explanations/evidence for each.
+
+## Results
+
+We plan to showcase detailed before and after results from live websites to illustrate the impact of our efforts. These examples will demonstrate how small optimisations in CSS can lead to significant environmental savings, highlighting the practical benefits of adopting sustainable web design practices. We’d love to hear about your experiences and results using our plugin. Please feel free to [email us](mailto:research@headless.horse).
+
 
 ## Repository Structure
 ```bash
 lib
-  └── index.js         # The plugin implementation
+  └── index.js          # The plugin implementation
 example
   ├── src
   │   └── index.css     # CSS file with violations for testing
-  ├── package.json     # Test site's package configuration
+  ├── package.json      # Test site's package configuration
   └── .stylelintrc.json # Stylelint configuration for the test site
-package.json           # Main project package configuration
+package.json            # Main project package configuration
 ```
 
 ## Getting Started
@@ -31,7 +44,7 @@ Navigate to the example directory and install the necessary dependencies.
 ```sh
 cd example
 npm install
-npm install --save-dev ../  # Link the plugin for local testing
+npm install --save-dev ../ # Link the plugin for local testing
 ```
 
 ### Step 3: Verify Stylelint Configuration
@@ -43,7 +56,7 @@ Ensure the .stylelintrc.json in the example directory is correctly configured to
 {
   "extends": "stylelint-config-standard",
   "plugins": [
-    "../lib/index"  // Path to your plugin
+    "../lib/index" // Path to your plugin
   ],
   "rules": {
     "plugin/stylelint-sustainable-css": [true, {
@@ -89,7 +102,7 @@ Here is an example CSS file example/src/index.css containing several rule violat
   margin: 0em;
 }
 
-/* Long form hex colors */
+/* Longform hex colors */
 .baz {
   color: #ffffff;
   background-color: #000000;
@@ -119,9 +132,19 @@ Here is an example CSS file example/src/index.css containing several rule violat
 
 When you run npm run lint, you should see output indicating the violations found by the plugin.
 
-## Contributing
+## How to Help
 
-Feel free to open issues or submit pull requests for improvements and bug fixes.
+The development of this plugin's rules is ongoing, and we welcome your contributions. Here’s how you can help:
+
+- Create, improve, or debug rules (refer to Stylelint’s [Working on Rules Guide](https://github.com/stylelint/stylelint/blob/master/docs/developer-guide/rules.md)).
+- Enhance the documentation.
+- Engage with us via [issues](https://github.com/printerscanner/stylelint-sustainable-css/issues) and [pull requests](https://github.com/printerscanner/stylelint-sustainable-css/pulls).
+- Propose new rules or improvements, and submit pull requests to demonstrate your ideas.
+- Add tests for any aspect of the project.
+- Optimise rule performance.
+- Contribute to [Stylelint](https://github.com/stylelint/stylelint).
+- View our sustainable web design resources website, [Overbrowsing](https://overbrowsing.com/).
+- Spread the word about sustainable web design!
 
 ## License
 This project is licensed under the MIT License.
