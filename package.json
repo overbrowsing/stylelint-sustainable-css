@@ -7,7 +7,7 @@
   },
   "author": "Headless Horse and printer_scanner",
   "license": "MIT",
-  "description": "TODO ADD DESCRIPTION",
+  "description": "Sustainable CSS is a Stylelint plugin dedicated to following sustainable web design principles.",
   "dependencies": {
     "stylelint": "^16.6.1"
   }
