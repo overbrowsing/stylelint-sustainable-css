@@ -1,9 +1,19 @@
 {
   "name": "stylelint-sustainable-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "stylelint",
+    "plugin",
+    "css",
+    "sustainable"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/printerscanner/stylelint-sustainable-css.git"
   },
   "author": "Headless Horse and printer_scanner",
   "license": "MIT",
