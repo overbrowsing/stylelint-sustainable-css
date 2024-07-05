@@ -291,7 +291,7 @@ margin: 0px;
 margin: 0;
 ```
 
-### Remove Unnecessary Units
+### Remove Unnecessary Units for `line-height`
 
 **Guideline:** For example omit units for `line-height`.
 
@@ -356,7 +356,7 @@ div.container > ul > li { ... }
 .container li { ... }
 ```
 
-### Use CSS Variables
+### Use Variables for Repeated Values
 
 **Guideline:** Use CSS variables for repeated values.
 
@@ -430,7 +430,7 @@ div#content > p.intro { ... }
 }
 ```
 
-### **Target Attribute Selectors instead of Classes / ID’s**
+### Target Attribute Selectors instead of Overly Specific Classes/IDs
 
 **Guideline:** Use attribute selectors instead of class names for specific styling when appropriate, reducing the need for extra class definitions.
 
@@ -442,7 +442,7 @@ div#content > p.intro { ... }
 button[data-type="primary"] { ... }
 ```
 
-### **Concatenating Property Values**
+### Concatenating Property Values
 
 **Guideline:** Combine multiple CSS properties on a single line to reduce redundancy and improve readability.
 
@@ -498,9 +498,9 @@ border-style: none;
 border: 0;
 ```
 
-### Remove Unnecessary Quotes
+### Remove Unnecessary Quotes from Fonts
 
-**Guideline:** Omit quotes around font family names when they are not necessary.
+**Guideline:** Omit quotes around font and font family names when they are not necessary.
 
 ```css
 /* Instead of this */
@@ -634,27 +634,6 @@ display: flex;
 }
 ```
 
-### Leverage the `all` Property
-
-**Guideline:** Use the `all` property to reset styles.
-
-```css
-/* Instead of this */
-.reset {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* Use this */
-.reset {
-  all: unset;
-}
-```
-
 ### Minimize Unnecessary `z-index`
 
 **Guideline:** Avoid using high `z-index` values unnecessarily.
@@ -758,7 +737,7 @@ h1 {
 
 **Guideline:** Our philosophy advocates against excessive compression and minification in CSS. While these methods can reduce file sizes, they often obscure the techniques used upon inspection, limiting their utility for others adopting similar practices in their projects. Maintaining clean and readable CSS is vital for facilitating efficient development and enabling others to benefit from and adopt these techniques.
 
-## Additional Optimisation Ideas
+## Additional Optimisations
 
 ### **Using Shorthand Properties for Single-Side `border`, `margin`, and `padding`**
 
@@ -884,7 +863,7 @@ border-top: 1px solid #000;
 border: 1px 0 0 0 solid #000;
 ```
 
-## Minimize `@font-face` HTTP Requests
+### Minimize `@font-face` HTTP Requests
 
 **Guideline:** If possible, reduce the number of custom fonts or subsets loaded using `@font-face` to decrease HTTP requests and improve page load times.
 
