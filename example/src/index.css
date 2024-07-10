@@ -1,65 +1,188 @@
-/* Longhand properties instead of shorthand */
-.foo {
-    margin: 10px 20px;
-  }
-  
-  /* Zero values with units */
-  .bar {
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Long form hex colors */
-  .baz {
-    color: var(--color-fff);
-    background-color: var(--background-color-000);
-  }
-  
-  /* Duplicate properties */
-  .qux {
-    color: red, blue;
-  }
+/* Use Default Values */
+.example {
+  border-style: none;
+}
 
-  .example {
-    color: rgb(255 0 0); /* This should trigger the rule */
+/* Remove Unnecessary Quotes from Fonts */
+.text {
+  font-family: "Arial", sans-serif;
+}
+
+/* Minimize Use of `float` */
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Optimise Media Queries */
+@media screen and (max-width: 768px) {
+  .header {
+    color: blue;
   }
-  
-  /* Vendor prefixes */
-  .quux {
-    transition: all 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    color: red;
   }
-  
-  /* Duplicate selectors */
-  .foo, .foo {
-    font-size: 16px;
-  }
-  
-  /* Empty block */
-  .empty {
-  }
-  
-  /* Example CSS */
+}
+
+/* Avoid `!important` Declarations */
+.footer {
+  color: #000 !important;
+}
+
+/* Use `:not` Pseudo-Class for Exclusions */
+.item {
+  color: #000;
+}
+
+.item.special {
+  color: #fff;
+}
+
+/* Use `display: none` for Hiding Elements */
+.hidden {
+  visibility: hidden;
+}
+
+/* Use `inherit` and `initial` Wisely */
+.parent .child {
+  color: #000;
+}
+
+/* Minimize Unnecessary `z-index` */
+.element {
+  z-index: 9999;
+}
+
+/* Layout and Positioning */
+
+/* CSS Grid for Complex Layouts */
 .container {
-  /* Long class name */
-  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.header .navigation ul li {
-  /* Nested long class names */
-  margin-bottom: 10px;
+.item {
+  width: 50%;
 }
 
-#content .article .content-section .title {
-  /* Deeply nested long class name */
-  font-size: 24px;
+/* Inline Flexbox for Quick Alignments */
+.container-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Long ID */
-#long-unique-identifier {
-  display: block;
+/* Formatting */
+
+/* 2 Spaces Vs 4 Spaces */
+.h1 {
+    margin: 0;
 }
 
-/* Long class and ID names */
-.section1 .long-class-name #long-unique-id {
-  background-color: var(--background-color-f0f0f0);
+/* Avoid Extra Spaces */
+h2 {
+  
+  padding: 10px;
+  
+}
+
+/* Remove Semicolon at End of Lines */
+h3 { margin: 0; }
+
+/* Compression/Minifying */
+/* No excessive minification applied here for demonstration purposes */
+
+/* Additional Optimisations */
+
+/* Using Shorthand Properties for Single-Side `border`, `margin`, and `padding` */
+.padding-right {
+  padding-right: 1em;
+}
+
+.padding-bottom {
+  padding-bottom: 1em;
+}
+
+.padding-left {
+  padding-left: 1em;
+}
+
+.padding-top {
+  padding-top: 1em;
+}
+
+.margin-right {
+  margin-right: 1em;
+}
+
+.margin-bottom {
+  margin-bottom: 1em;
+}
+
+.margin-left {
+  margin-left: 1em;
+}
+
+.margin-top {
+  margin-top: 1em;
+}
+
+.border-right {
+  border-right: 1px solid #000;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #000;
+}
+
+.border-left {
+  border-left: 1px solid #000;
+}
+
+.border-top {
+  border-top: 1px solid #000;
+}
+
+/* Minimize `@font-face` HTTP Requests */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('Pilowlava-Atome.woff') format('woff'),
+       url('Pilowlava-Atome.woff2') format('woff2');
+  font-weight: 400;
+}
+
+/* Utilize HTML Tags for Styling Text */
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* Special Characters vs Entities vs Unicode */
+.sum {
+  content: '&#8721;';
+}
+
+.copyright {
+  content: '&#169;';
+}
+
+.emoji {
+  content: '&#x1F4B0;';
+}
+
+/* Unicode Characters for Icons */
+.icon {
+  background-image: url('icon.svg');
+}
+
+/* Data URIs for Small Images */
+.logo {
+  background-image: url('logo.png');
 }

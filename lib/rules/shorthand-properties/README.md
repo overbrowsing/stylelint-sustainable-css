@@ -44,7 +44,7 @@ border-color: #000;
 border: 1px solid #000;
 ```
 
-### Optimize `text-decoration`
+### Optimise `text-decoration`
 
 **Guideline:** Combine `text-decoration` properties.
 

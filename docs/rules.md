@@ -8,66 +8,8 @@ This is a living document and is continuously evolving, we welcome your contribu
 
 
 
-## Values
 
 
-
-
-
-
-
-## Best Practices
-
-
-
-
-
-
-
-
-### Concatenating Property Values
-
-**Guideline:** Combine multiple CSS properties on a single line to reduce redundancy and improve readability.
-
-```css
-/* Instead of this */
-.image {
-  filter: grayscale(100%);
-  filter: blur(5px);
-}
-
-/* Use this */
-.image {
-  filter: grayscale(100%) blur(5px);
-}
-```
-
-### Combine Multiple of the Same Property Values
-
-**Guideline:** Combine multiple CSS property values into a single line using a comma-separated list.
-
-```css
-/* Instead of this */
-box-shadow: 1px 1px 2px #000;
-box-shadow: inset 0 0 10px #000;
-
-/* Use this */
-box-shadow: 1px 1px 2px #000, inset 0 0 10px #000;
-```
-
-### Minimize Vendor Prefixes
-
-**Guideline:** Use autoprefixers or browser support checks to avoid unnecessary vendor prefixes that add extra bytes to CSS files.
-
-```css
-/* Instead of this */
--webkit-transition: all 0.3s;
--moz-transition: all 0.3s;
-transition: all 0.3s;
-
-/* Use this */
-transition: all 0.3s;
-```
 
 ### Use Default Values
 
@@ -93,7 +35,7 @@ font-family: "Arial", sans-serif;
 font-family: Arial, sans-serif;
 ```
 
-### Minimize Use of `float`
+### Minimise Use of `float`
 
 **Guideline:** Use flexbox or grid instead of `float`.
 
@@ -206,7 +148,7 @@ display: flex;
 }
 ```
 
-### Minimize Unnecessary `z-index`
+### Minimise Unnecessary `z-index`
 
 **Guideline:** Avoid using high `z-index` values unnecessarily.
 
@@ -435,7 +377,7 @@ border-top: 1px solid #000;
 border: 1px 0 0 0 solid #000;
 ```
 
-### Minimize `@font-face` HTTP Requests
+### Minimise `@font-face` HTTP Requests
 
 **Guideline:** If possible, reduce the number of custom fonts or subsets loaded using `@font-face` to decrease HTTP requests and improve page load times.
 

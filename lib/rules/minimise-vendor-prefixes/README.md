@@ -1,4 +1,4 @@
-# Minimize Vendor Prefixes
+# Minimise Vendor Prefixes
 
 **Guideline:** Use autoprefixers or browser support checks to avoid unnecessary vendor prefixes that add extra bytes to CSS files.
 

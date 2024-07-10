@@ -1,4 +1,4 @@
-# Minimize `@font-face` HTTP Requests
+# Minimise `@font-face` HTTP Requests
 
 **Guideline:** If possible, reduce the number of custom fonts or subsets loaded using `@font-face` to decrease HTTP requests and improve page load times.
 
