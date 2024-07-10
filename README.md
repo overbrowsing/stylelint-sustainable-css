@@ -1,163 +1,64 @@
 
 # **Sustainable CSS — Stylelint Plugin**
 
-## Every Byte Counts
+[![NPM version](http://img.shields.io/npm/v/stylelint-sustainable-css.svg)](https://www.npmjs.org/package/stylelint-sustainable-css)
+[![npm](https://img.shields.io/npm/dt/stylelint-sustainable-css.svg)](http://www.npmtrends.com/stylelint-sustainable-css)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
 
-Sustainable CSS is a [Stylelint](https://stylelint.io) plugin dedicated to following [sustainable web design](https://sustainablewebdesign.org) principles. The plugin optimises CSS by identifying and addressing issues that contribute to larger file sizes, thereby helping conserve environmental resources.
+## Installation and usage
 
-While many style guides are subjective regarding appearance, our core principle is simple: "Does it save bytes?"
-
-## Installation
-
-To install the plugin, run:
-
-```sh
-npm install --save-dev stylelint-sustainable-css
-```
-
-## Usage
-
-Add it to your `.stylelintrc` configuration file:
-
-```json
-{
-  "extends": "stylelint-config-standard",
-  "plugins": [
-    "stylelint-sustainable-css"
-  ],
-  "rules": {
-    "plugin/stylelint-sustainable-css": [true, {
-      // Add any secondary options here
-    }]
-  }
-}
-```
-
-## Example Usage
-
-Here is an example CSS file example/src/index.css containing several rule violations:
-
-```css
-/* Longhand properties instead of shorthand */
-.foo {
-  margin-top: 10px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-}
-
-/* Zero values with units */
-.bar {
-  padding: 0px;
-  margin: 0em;
-}
-
-/* Longform hex colors */
-.baz {
-  color: #ffffff;
-  background-color: #000000;
-}
-
-/* Duplicate properties */
-.qux {
-  color: red;
-  color: blue;
-}
-
-/* Vendor prefixes */
-.quux {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-}
-
-/* Duplicate selectors */
-.foo, .foo {
-  font-size: 16px;
-}
-
-/* Empty block */
-.empty {
-}
-```
-
-When you run npm run lint, you should see output indicating the violations found by the plugin.
-
-## Rules Documentation
-
-You can find all the rules for the plugin in the [rules document](https://github.com/printerscanner/stylelint-sustainable-css/blob/main/docs/rules.md), complete with examples and explanations for each.
-
-## Results
-
-We plan to showcase detailed before and after results from live websites to illustrate the impact of this plugin. These examples will demonstrate how small optimisations in CSS can lead to significant environmental savings, highlighting the practical benefits of adopting sustainable web design practices. We’d love to hear about your experiences and results using our plugin. Please feel free to [email us](mailto:research@headless.horse).
-
-## Repository Structure
 ```bash
-docs
-  └── rules.md          # The plugin rules documentation
-lib
-  └── index.js          # The plugin implementation
-example
-  ├── src
-  │   └── index.css     # CSS file with violations for testing
-  ├── package.json      # Test site's package configuration
-  └── .stylelintrc.json # Stylelint configuration for the test site
-package.json            # Main project package configuration
+npm install --save-dev stylelint stylelint-sustainable-css
 ```
 
-## Getting Started
+Create the `.stylelintrc.json` config file (or open the existing one), add `stylelint-sustainable-css` to the plugins array and the rules you need to the rules list. All rules from stylelint-sustainable-css need to be namespaced with `sustainable-css`.
 
-Follow these steps to test the plugin in the test site:
-Step 1: Clone the Repository
+Please refer to [stylelint docs](https://stylelint.io/user-guide/) for the detailed info on using this linter.
 
-```sh
-git clone https://github.com/printer_scanner/stylelint-sustainable-css.git
-cd stylelint-sustainable-css-plugin
+## Rules
+
+- ⭐️ - the mark of recommended rules.
+- ✒️ - the mark of fixable rules.
+
+|       | Rule ID                                                                                    | Description                                                             |
+| :---- | :----------------------------------------------------------------------------------------- | :---------------------------------------------------------------------- |
+|       | [content-property-no-static-value](./src/rules/content-property-no-static-value/README.md) | Disallow unaccessible CSS generated content in pseudo-elements          |
+|       | [font-size-is-readable](./src/rules/font-size-is-readable/README.md)                       | Disallow font sizes less than `15px`                                    |
+|       | [line-height-is-vertical-rhythmed](./src/rules/line-height-is-vertical-rhythmed/README.md) | Disallow not vertical rhythmed `line-height`                            |
+| ⭐️✒️ | [media-prefers-reduced-motion](./src/rules/media-prefers-reduced-motion/README.md)         | Require certain styles if the animation or transition in media features |
+|       | [media-prefers-color-scheme](./src/rules/media-prefers-color-scheme/README.md)             | Require implementation of certain styles for selectors with colors.     |
+|       | [no-display-none](./src/rules/no-display-none/README.md)                                   | Disallow content hiding with `display: none` property                   |
+|       | [no-obsolete-attribute](./src/rules/no-obsolete-attribute/README.md)                       | Disallow obsolete attribute using                                       |
+|       | [no-obsolete-element](./src/rules/no-obsolete-element/README.md)                           | Disallow obsolete selectors using                                       |
+|       | [no-spread-text](./src/rules/no-spread-text/README.md)                                     | Require width of text in a comfortable range                            |
+| ⭐️   | [no-outline-none](./src/rules/no-outline-none/README.md)                                   | Disallow outline clearing                                               |
+|       | [no-text-align-justify](./src/rules/no-text-align-justify/README.md)                       | Disallow content with `text-align: justify`                             |
+| ⭐️✒️ | [selector-pseudo-class-focus](./src/rules/selector-pseudo-class-focus/README.md)           | Require or disallow a pseudo-element to the selectors with `:hover`     |
+
+## Recommended config
+
+Add recommended configuration by simply adding the following to `extends` in your stylelint configuration:
+
+```
+stylelint-sustainable-css/recommended
 ```
 
-### Step 2: Install Dependencies
-
-Navigate to the example directory and install the necessary dependencies.
-
-```sh
-cd example
-npm install
-npm install --save-dev ../ 
-```
-
-### Step 3: Verify Stylelint Configuration
-
-Ensure the .stylelintrc.json in the example directory is correctly configured to use the plugin:
+This shareable config contains the following:
 
 ```json
-
 {
-  "extends": "stylelint-config-standard",
-  "plugins": [
-    "plugin/stylelint-sustainable-css" // Path to your plugin
-  ],
+  "plugins": ["stylelint-sustainable-css"],
   "rules": {
     "sustainable-css/avoid-compression": true,
-    "sustainable-css/avoid-extra-spaces": true
+    "sustainable-css/avoid-extra-spaces": true,
+    "sustainable-css/avoid-important-declarations": true,
+    "sustainable-css/avoid-inherit-initial": true
   }
 }
 ```
 
-### Step 4: Test the Plugin
+Since it adds stylelint-sustainable-css to `plugins`, you don't have to do this yourself when extending this config.
 
-Run Stylelint on the test CSS file to see the plugin in action:
-
-```sh
-npm run lint
-```
-
-The lint script is defined in example/package.json as follows:
-
-```json
-
-"scripts": {
-  "lint": "stylelint 'src/**/*.css'"
-}
-```
 
 ## How to Help
 
