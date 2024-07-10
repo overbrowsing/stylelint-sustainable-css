@@ -1,21 +1,18 @@
 /* Longhand properties instead of shorthand */
 .foo {
-    margin-top: 10px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    margin-left: 20px;
+    margin: 10px 20px;
   }
   
   /* Zero values with units */
   .bar {
-    padding: 0px;
-    margin: 0em;
+    padding: 0;
+    margin: 0;
   }
   
   /* Long form hex colors */
   .baz {
-    color: #ffffff;
-    background-color: #000000;
+    color: #fff;
+    background-color: #000;
   }
   
   /* Duplicate properties */
@@ -23,11 +20,14 @@
     color: red;
     color: blue;
   }
+
+  .example {
+    color: rgb(255 0 0); /* This should trigger the rule */
+  }
   
   /* Vendor prefixes */
   .quux {
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
+    transition: all 0.3s;
   }
   
   /* Duplicate selectors */
