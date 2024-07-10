@@ -133,12 +133,11 @@ Ensure the .stylelintrc.json in the example directory is correctly configured to
 {
   "extends": "stylelint-config-standard",
   "plugins": [
-    "../lib/index" // Path to your plugin
+    "plugin/stylelint-sustainable-css" // Path to your plugin
   ],
   "rules": {
-    "plugin/stylelint-sustainable-css": [true, {
-      // Add any secondary options here
-    }]
+    "sustainable-css/avoid-compression": true,
+    "sustainable-css/avoid-extra-spaces": true
   }
 }
 ```
