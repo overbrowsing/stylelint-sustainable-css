@@ -17,8 +17,7 @@
   
   /* Duplicate properties */
   .qux {
-    color: red;
-    color: blue;
+    color: red, blue;
   }
 
   .example {

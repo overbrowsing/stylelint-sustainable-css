@@ -1,0 +1,3 @@
+# Compression/Minifying
+
+**Guideline:** Our philosophy advocates against excessive compression and minification in CSS. While these methods can reduce file sizes, they often obscure the techniques used upon inspection, limiting their utility for others adopting similar practices in their projects. Maintaining clean and readable CSS is vital for facilitating efficient development and enabling others to benefit from and adopt these techniques.
