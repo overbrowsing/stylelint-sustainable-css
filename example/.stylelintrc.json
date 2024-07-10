@@ -11,6 +11,9 @@
       "sustainable-css/numerical-font-weight" : true,
       "sustainable-css/prefer-em" : true,
       "sustainable-css/minimise-numeric-values": true,
-      "sustainable-css/remove-unnecessary-units": true
+      "sustainable-css/remove-unnecessary-units": true,
+      "sustainable-css/shorter-class-names": true,
+      "sustainable-css/combine-selectors": true,
+      "sustainable-css/avoid-overly-specific-selectors": tru
     }
   }

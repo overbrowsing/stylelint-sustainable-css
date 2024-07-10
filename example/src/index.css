@@ -11,8 +11,8 @@
   
   /* Long form hex colors */
   .baz {
-    color: #fff;
-    background-color: #000;
+    color: var(--color-fff);
+    background-color: var(--background-color-000);
   }
   
   /* Duplicate properties */
@@ -39,3 +39,28 @@
   .empty {
   }
   
+  /* Example CSS */
+.container {
+  /* Long class name */
+  padding: 20px;
+}
+
+.header .navigation ul li {
+  /* Nested long class names */
+  margin-bottom: 10px;
+}
+
+#content .article .content-section .title {
+  /* Deeply nested long class name */
+  font-size: 24px;
+}
+
+/* Long ID */
+#long-unique-identifier {
+  display: block;
+}
+
+/* Long class and ID names */
+.section1 .long-class-name #long-unique-id {
+  background-color: var(--background-color-f0f0f0);
+}
