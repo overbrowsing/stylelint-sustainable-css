@@ -17,23 +17,19 @@ Please refer to [stylelint docs](https://stylelint.io/user-guide/) for the detai
 
 ## Rules
 
-- ⭐️ - the mark of recommended rules.
-- ✒️ - the mark of fixable rules.
+⭐️ - the mark of recommended group of rules.
 
-|       | Rule ID                                                                                    | Description                                                             |
-| :---- | :----------------------------------------------------------------------------------------- | :---------------------------------------------------------------------- |
-|       | [content-property-no-static-value](./src/rules/content-property-no-static-value/README.md) | Disallow unaccessible CSS generated content in pseudo-elements          |
-|       | [font-size-is-readable](./src/rules/font-size-is-readable/README.md)                       | Disallow font sizes less than `15px`                                    |
-|       | [line-height-is-vertical-rhythmed](./src/rules/line-height-is-vertical-rhythmed/README.md) | Disallow not vertical rhythmed `line-height`                            |
-| ⭐️✒️ | [media-prefers-reduced-motion](./src/rules/media-prefers-reduced-motion/README.md)         | Require certain styles if the animation or transition in media features |
-|       | [media-prefers-color-scheme](./src/rules/media-prefers-color-scheme/README.md)             | Require implementation of certain styles for selectors with colors.     |
-|       | [no-display-none](./src/rules/no-display-none/README.md)                                   | Disallow content hiding with `display: none` property                   |
-|       | [no-obsolete-attribute](./src/rules/no-obsolete-attribute/README.md)                       | Disallow obsolete attribute using                                       |
-|       | [no-obsolete-element](./src/rules/no-obsolete-element/README.md)                           | Disallow obsolete selectors using                                       |
-|       | [no-spread-text](./src/rules/no-spread-text/README.md)                                     | Require width of text in a comfortable range                            |
-| ⭐️   | [no-outline-none](./src/rules/no-outline-none/README.md)                                   | Disallow outline clearing                                               |
-|       | [no-text-align-justify](./src/rules/no-text-align-justify/README.md)                       | Disallow content with `text-align: justify`                             |
-| ⭐️✒️ | [selector-pseudo-class-focus](./src/rules/selector-pseudo-class-focus/README.md)           | Require or disallow a pseudo-element to the selectors with `:hover`     |
+|    | Group ID                         | Description                      |
+| :- | :------------------------------- | :------------------------------- |
+| ⭐️ | [shorter-values][1]              | Use shortened values and units, apply shorthand values and remove redundant characters within values. |
+| ⭐️ | [optimise-properties][2]         | Remove redundant properties, merge them where possible, and use shorter property names. |
+| ⭐️ | [remove-redundants][3]           | Remove redundant glyphs, spaces, declarations, and properties. |
+|    | [optimise-selectors][4]          | Simplify selector names, combine selectors with shared properties, and minimise media queries. |
+
+[1]: lib/rules/shorter-values/README.md
+[2]: lib/rules/optimise-properties/README.md
+[3]: lib/rules/remove-redundants/README.md
+[4]: lib/rules/optimise-selectors/README.md
 
 ## Recommended config
 
