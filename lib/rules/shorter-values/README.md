@@ -215,10 +215,10 @@ Guideline: It is preferable to use special characters (such as ©, ®, emojis, e
 **Emoji (Newspaper 📰)**
 
 ```html
-<!-- Character count: -->
+<!-- Character count: 1 -->
 📰
 
-<!-- Character count: -->
+<!-- Character count: 8 -->
 &#x1F4B0;
 ```
 
