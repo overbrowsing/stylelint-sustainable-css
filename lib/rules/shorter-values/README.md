@@ -25,7 +25,9 @@ color: #ffffff
 color: #fff
 ```
 
-### Use `transparent` for Transparent Colors
+# prefer-transparent
+
+## Use `transparent` for Transparent Colors
 
 **Guideline:** Use `transparent` keyword for fully transparent colors as it uses less characters.
 
