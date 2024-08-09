@@ -23,12 +23,12 @@ Please refer to [stylelint docs](https://stylelint.io/user-guide/) for the detai
 | :- | :------------------------------- | :------------------------------- |
 | ⭐️ | [shorter-values][1]              | Use shortened values and units, apply shorthand values and remove redundant characters within values. |
 | ⭐️ | [optimise-properties][2]         | Remove redundant properties, merge them where possible, and use shorter property names. |
-| ⭐️ | [remove-redundants][3]           | Remove redundant glyphs, spaces, declarations, and properties. |
+| ⭐️ | [remove-redundancies][3]           | Remove redundant glyphs, spaces, declarations, and properties. |
 |    | [optimise-selectors][4]          | Simplify selector names, combine selectors with shared properties, and minimise media queries. |
 
 [1]: lib/rules/shorter-values/README.md
 [2]: lib/rules/optimise-properties/README.md
-[3]: lib/rules/remove-redundants/README.md
+[3]: lib/rules/remove-redundancies/README.md
 [4]: lib/rules/optimise-selectors/README.md
 
 ## Recommended config
