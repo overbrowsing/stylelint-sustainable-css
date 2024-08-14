@@ -77,6 +77,43 @@ This shareable config contains the following:
 Since it adds stylelint-sustainable-css to `plugins`, you don't have to do this yourself when extending this config.
 
 
+# Testing
+
+To quickly test the `stylelint-sustainable-css` plugin, follow these steps:
+
+## Step 1: Clone the Repository
+
+```sh
+git clone https://github.com/printer_scanner/stylelint-sustainable-css.git
+cd stylelint-sustainable-css
+```
+
+## Step 2: Navigate to the Example Directory
+
+The `example` directory contains sample CSS files and a pre-configured setup to demonstrate the plugin.
+
+```sh
+cd example
+```
+
+## Step 3: Install Dependencies
+
+```sh
+npm install
+npm install --save-dev ../  # Link the plugin locally for testing
+```
+
+## Step 4: Test the Plugin
+
+Run the linting process on the example CSS files to see the plugin in action:
+
+```sh
+npm run lint
+```
+
+This will lint the CSS files in the `example/src` directory using the `stylelint-sustainable-css` plugin.
+
+
 ## How to Help
 
 The development of this plugin's rules is ongoing, and we welcome your contributions. Here’s how you can help:
