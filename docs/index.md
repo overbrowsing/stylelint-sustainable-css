@@ -1,12 +1,10 @@
+# Rules
+
 ## Guidance
 
 The majority of these rules will cover 99.9% of most use cases for making your style sheet file smaller. However, there are some exceptions and specific cases for each rule, which we suggest reviewing in this document incase the plugin has broken a specific style of your project.
 
 This is a living document and is continuously evolving, we welcome your contributions.
-
-
-
-
 
 
 ### Use Default Values
