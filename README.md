@@ -1,9 +1,17 @@
 
+
 # **Sustainable CSS — Stylelint Plugin**
 
 [![NPM version](http://img.shields.io/npm/v/stylelint-sustainable-css.svg)](https://www.npmjs.org/package/stylelint-sustainable-css)
 [![npm](https://img.shields.io/npm/dt/stylelint-sustainable-css.svg)](http://www.npmtrends.com/stylelint-sustainable-css)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
+
+## Every Byte Counts
+
+Sustainable CSS is a [Stylelint](https://stylelint.io) plugin dedicated to following [sustainable web design](https://sustainablewebdesign.org) principles. The plugin optimises CSS by identifying and addressing issues that contribute to larger file sizes, thereby helping conserve environmental resources.
+
+While many style guides are subjective regarding appearance, our core principle is simple: "Does it save bytes?"
+
 
 ## Installation and usage
 
@@ -19,17 +27,30 @@ Please refer to [stylelint docs](https://stylelint.io/user-guide/) for the detai
 
 ⭐️ - the mark of recommended group of rules.
 
-|    | Group ID                         | Description                      |
-| :- | :------------------------------- | :------------------------------- |
-| ⭐️ | [shorter-values][1]              | Use shortened values and units, apply shorthand values and remove redundant characters within values. |
-| ⭐️ | [optimise-properties][2]         | Remove redundant properties, merge them where possible, and use shorter property names. |
-| ⭐️ | [remove-redundancies][3]           | Remove redundant glyphs, spaces, declarations, and properties. |
-|    | [optimise-selectors][4]          | Simplify selector names, combine selectors with shared properties, and minimise media queries. |
+|    | Group ID                         | Description                                                              |
+| :- | :------------------------------- | :----------------------------------------------------------------------- |
+|    | [avoid-duplicate-media-queries][1] | Avoid defining identical media queries multiple times in the stylesheet.  |
+|    | [concatenate-property-values][2] | Concatenate property values where applicable to reduce CSS file size.     |
+|    | [no-important-tags][3]           | Prevent the use of `!important` in styles to maintain code simplicity and avoid specificity issues. |
+|    | [no-semicolons][4]               | Enforce the removal of unnecessary semicolons within CSS rules.           |
+|    | [no-vendor-prefixes][5]          | Avoid the use of vendor prefixes to encourage cross-browser compatibility through standard properties. |
+|    | [optimise-selectors][6]          | Simplify selector names, combine selectors with shared properties, and minimise media queries. |
+| ⭐️ | [remove-redundancies][7]         | Remove redundant glyphs, spaces, declarations, and properties.            |
+| ⭐️ | [shorten-properties][8]          | Remove redundant properties, merge them where possible, and use shorter property names. |
+| ⭐️ | [shorten-units][9]               | Use shortened values and units, apply shorthand values, and remove redundant characters within values. |
+|    | [use-special-characters][10]     | Use special characters in CSS where appropriate to reduce code length and enhance readability. |
 
-[1]: lib/rules/shorter-values/README.md
-[2]: lib/rules/optimise-properties/README.md
-[3]: lib/rules/remove-redundancies/README.md
-[4]: lib/rules/optimise-selectors/README.md
+[1]: lib/rules/avoid-duplicate-media-queries/README.md
+[2]: lib/rules/concatenate-property-values/README.md
+[3]: lib/rules/no-important-tags/README.md
+[4]: lib/rules/no-semicolons/README.md
+[5]: lib/rules/no-vendor-prefixes/README.md
+[6]: lib/rules/optimise-selectors/README.md
+[7]: lib/rules/remove-redundancies/README.md
+[8]: lib/rules/shorten-properties/README.md
+[9]: lib/rules/shorten-units/README.md
+[10]: lib/rules/use-special-characters/README.md
+
 
 ## Recommended config
 
@@ -45,10 +66,10 @@ This shareable config contains the following:
 {
   "plugins": ["stylelint-sustainable-css"],
   "rules": {
-    "sustainable-css/avoid-compression": true,
-    "sustainable-css/avoid-extra-spaces": true,
-    "sustainable-css/avoid-important-declarations": true,
-    "sustainable-css/avoid-inherit-initial": true
+    "sustainable-css/shorten-units": true,
+    "sustainable-css/shorten-properties": true,
+    "sustainable-css/remove-redundancies": true,
+    "sustainable-css/optimise-selectors": true
   }
 }
 ```

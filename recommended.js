@@ -1,12 +1,9 @@
 module.exports = {
-  "extends": "stylelint-config-standard",
-  "plugins": [
-    "../lib/index"  
-  ],
-  "rules": {
-    "sustainable-css/avoid-compression": true,
-    "sustainable-css/avoid-extra-spaces": true,
-    "sustainable-css/avoid-important-declarations": true,
-    "sustainable-css/avoid-inherit-initial": true
+  plugins: ['.'],
+  rules: {
+    "sustainable-css/shorten-units": true,
+    "sustainable-css/shorten-properties": true,
+    "sustainable-css/remove-redundancies": true,
+    "sustainable-css/optimise-selectors": true
   }
 }
