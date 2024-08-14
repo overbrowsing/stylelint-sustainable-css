@@ -6,6 +6,8 @@ The majority of these rules will cover 99.9% of most use cases for making your s
 
 This is a living document and is continuously evolving, we welcome your contributions.
 
+Read more about the project on [npm](https://www.npmjs.com/package/stylelint-sustainable-css).
+
 
 ### Use Default Values
 
