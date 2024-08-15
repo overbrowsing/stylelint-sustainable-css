@@ -82,7 +82,7 @@ To quickly test the `stylelint-sustainable-css` plugin, follow these steps:
 ## Step 1: Clone the Repository
 
 ```sh
-git clone https://github.com/printer_scanner/stylelint-sustainable-css.git
+git clone https://github.com/overbrowsing/stylelint-sustainable-css.git
 cd stylelint-sustainable-css
 ```
 
