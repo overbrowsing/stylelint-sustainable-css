@@ -1,17 +1,19 @@
-# Concatenating Property Values
+## concatenate-property-values
+
+### Concatenating Property Values
 
 **Guideline:** Combine multiple CSS properties on a single line to reduce redundancy and improve readability.
 
 ```css
 /* Instead of this */
-.image {
+.element {
   filter: grayscale(100%);
-  filter: blur(5px);
+  filter: blur(5px)
 }
 
 /* Use this */
-.image {
-  filter: grayscale(100%) blur(5px);
+.element {
+  filter: grayscale(100%) blur(5px)
 }
 ```
 
@@ -21,9 +23,13 @@
 
 ```css
 /* Instead of this */
-box-shadow: 1px 1px 2px #000;
-box-shadow: inset 0 0 10px #000;
+.element {
+  box-shadow: 1px 1px 2px #000;
+  box-shadow: inset 0 0 10px #000
+}
 
 /* Use this */
-box-shadow: 1px 1px 2px #000, inset 0 0 10px #000;
+.element {
+  box-shadow: 1px 1px 2px #000, inset 0 0 10px #000
+}
 ```

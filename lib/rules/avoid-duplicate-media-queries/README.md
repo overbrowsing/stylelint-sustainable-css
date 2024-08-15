@@ -1,4 +1,6 @@
-# Optimise Media Queries
+## avoid-duplicate-media-queries
+
+### Optimise Media Queries
 
 **Guideline:** Combine similar media queries and avoid redundant declarations within them to keep stylesheet size minimal.
 
@@ -14,13 +16,13 @@
 
 /* Use this */
 @media screen and (max-width: 768px) {
-  .header, .footer { ... }
+  .header { ... }
+
+  .footer { ... }
 }
 
 /* Or Use this */
 @media screen and (max-width: 768px) {
-  .header { ... }
-  
-  .footer { ... }
+  .header, .footer { ... }
 }
 ```

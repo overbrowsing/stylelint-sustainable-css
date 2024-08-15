@@ -1,17 +1,17 @@
-# avoid-important-declarations
+## no-important-tags
 
-## Avoid `!important` Declarations
+### Avoid `!important` Declarations
 
 **Guideline:** Minimise the use of `!important` to maintain CSS specificity and avoid overriding styles unnecessarily.
 
 ```css
 /* Instead of this */
 .footer {
-  color: #000 !important;
+  color: green !important
 }
 
 /* Use this */
 .footer {
-  color: #000;
+  color: green
 }
 ```

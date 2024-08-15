@@ -1,6 +1,6 @@
-# avoid-overly-specific-selectors
+## optimize-selectors
 
-## Avoid Overly Specific Selectors
+### Avoid Overly Specific Selectors
 
 **Guideline:** Avoid unnecessary specificity in selectors.
 
@@ -12,7 +12,7 @@ div#content > p.intro { ... }
 .intro { ... }
 ```
 
-## Target Attribute Selectors instead of Overly Specific Classes/IDs
+### Target Attribute Selectors instead of Overly Specific Classes/IDs
 
 **Guideline:** Use attribute selectors instead of class names for specific styling when appropriate, reducing the need for extra class definitions.
 
@@ -24,23 +24,7 @@ div#content > p.intro { ... }
 button[data-type="primary"] { ... }
 ```
 
-# combine-selectors
-
-## Combine Selectors
-
-**Guideline:** Group selectors with the same styles.
-
-```css
-/* Instead of this */
-h1 { ... }
-
-h2 { ... }
-
-/* Use this */
-h1, h2 { ... }
-```
-
-## Avoid Redundant Selectors
+### Avoid Redundant Selectors
 
 **Guideline:** Simplify selectors to reduce their length.
 
@@ -52,58 +36,58 @@ div.container > ul > li { ... }
 .container li { ... }
 ```
 
-
-## Combine Selectors with Similar Styles
+### Combine Selectors with Similar Styles
 
 **Guideline:** When multiple selectors share the same style declarations, combine them into a single rule to reduce redundancy. Or even better make one single class!
 
 ```css
 /* Instead of this */
 .button {
-  color: #fff;
-  background: #007bff;
+  color: green;
+  border: 1px solid green
 }
+
 .submit-button {
-  color: #fff;
-  background: #007bff;
+  color: green;
+  border: 1px solid green
 }
 
 /* Use this */
 .button, .submit-button {
-  color: #fff;
-  background: #007bff;
+  color: green;
+  border: 1px solid green
 }
 ```
 
-## Use Variables for Repeated Values
+### Use Variables for Repeated Values
 
 **Guideline:** Use CSS variables for repeated values.
 
 ```css
 /* Instead of this */
 .header {
-  border: #000 1px solid;
+  font: 400 15px/1.5 courier, monospace
 }
 
 .footer {
-  border: #000 1px solid;
+  font: 400 15px/1.5 courier, monospace
 }
 
 /* Use this */
 :root {
-  --border: #000 1px solid;
+  --font-style-1: 400 15px/1.5 courier, monospace
 }
 
 .header {
-  border: var(--border);
+  font: var(--font-style-1)
 }
 
 .footer {
-  border: var(--border);
+  font: var(--font-style-1)
 }
 ```
 
-## Minimise Selector Depth
+### Minimise Selector Depth
 
 **Guideline:** Avoid overly specific or redundant selectors to reduce file size and improve readability.
 
@@ -115,38 +99,7 @@ div.container > ul > li { ... }
 .title { ... }
 ```
 
-# optimise-media-queries
-
-## Optimise Media Queries
-
-**Guideline:** Combine similar media queries and avoid redundant declarations within them to keep stylesheet size minimal.
-
-```css
-/* Instead of this */
-@media screen and (max-width: 768px) {
-  .header { ... }
-}
-
-@media screen and (max-width: 768px) {
-  .footer { ... }
-}
-
-/* Use this */
-@media screen and (max-width: 768px) {
-  .header, .footer { ... }
-}
-
-/* Or Use this */
-@media screen and (max-width: 768px) {
-  .header { ... }
-  
-  .footer { ... }
-}
-```
-
-# shorter-selector-names
-
-## Use Shorter Selector Names
+### Use Shorter Selector Names
 
 **Guideline:** When naming classes and IDs, choose short, descriptive names to improve readability and navigation in your CSS files. Aim for names under 10 - 14 characters.
 

@@ -1,188 +1,378 @@
-/* Use Default Values */
-.example {
-  border-style: none;
-}
-
-/* Remove Unnecessary Quotes from Fonts */
-.text {
-  font-family: "Arial", sans-serif;
-}
-
-/* Minimize Use of `float` */
-.column {
-  float: left;
-  width: 50%;
-}
+/* avoid-duplicate-media-queries */
+/* -------------------------------------------------------------------- */
 
 /* Optimise Media Queries */
 @media screen and (max-width: 768px) {
   .header {
-    color: blue;
+    color: green
   }
 }
 
 @media screen and (max-width: 768px) {
   .footer {
-    color: red;
+    color: green
   }
 }
 
-/* Avoid `!important` Declarations */
-.footer {
-  color: #000 !important;
-}
 
-/* Use `:not` Pseudo-Class for Exclusions */
-.item {
-  color: #000;
-}
 
-.item.special {
-  color: #fff;
-}
+/* concatenate-property-values */
+/* -------------------------------------------------------------------- */
 
-/* Use `display: none` for Hiding Elements */
-.hidden {
-  visibility: hidden;
-}
-
-/* Use `inherit` and `initial` Wisely */
-.parent .child {
-  color: #000;
-}
-
-/* Minimize Unnecessary `z-index` */
+/* Concatenating Property Values */
 .element {
-  z-index: 9999;
+  filter: grayscale(100%);
+  filter: blur(5px)
 }
 
-/* Layout and Positioning */
-
-/* CSS Grid for Complex Layouts */
-.container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+/* Combine Multiple of the Same Property Values */
+.element {
+  box-shadow: 1px 1px 2px #000;
+  box-shadow: inset 0 0 10px #000
 }
 
-.item {
-  width: 50%;
+
+
+/* no-important-tags */
+/* -------------------------------------------------------------------- */
+/* Avoid '!important' Declarations */
+.footer {
+  color: green !important
 }
 
-/* Inline Flexbox for Quick Alignments */
-.container-inline {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-/* Formatting */
 
-/* 2 Spaces Vs 4 Spaces */
-.h1 {
-    margin: 0;
-}
-
-/* Avoid Extra Spaces */
-h2 {
-  
-  padding: 10px;
-  
-}
+/* no-semicolons */
+/* -------------------------------------------------------------------- */
 
 /* Remove Semicolon at End of Lines */
-h3 { margin: 0; }
-
-/* Compression/Minifying */
-/* No excessive minification applied here for demonstration purposes */
-
-/* Additional Optimisations */
-
-/* Using Shorthand Properties for Single-Side `border`, `margin`, and `padding` */
-.padding-right {
-  padding-right: 1em;
+h1 {
+  color: green;
 }
 
-.padding-bottom {
-  padding-bottom: 1em;
+
+
+/* no-vendor-prefixes */
+/* -------------------------------------------------------------------- */
+/* Minimise Vendor Prefixes */
+.element {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s
 }
 
-.padding-left {
-  padding-left: 1em;
+
+
+/* optimize-selectors */
+/* -------------------------------------------------------------------- */
+
+/* Avoid Overly Specific Selectors */
+div#content>p.intro {
+  color: green
 }
 
-.padding-top {
-  padding-top: 1em;
+/* Target Attribute Selectors instead of Overly Specific Classes/IDs */
+.element-with-long-name {
+  color: green
 }
 
-.margin-right {
-  margin-right: 1em;
+/* Avoid Redundant Selectors */
+div.container>ul>li {
+  color: green
 }
 
-.margin-bottom {
-  margin-bottom: 1em;
+/* Combine Selectors with Similar Styles */
+.button {
+  color: green;
+  border: 1px solid green
 }
 
-.margin-left {
-  margin-left: 1em;
+.submit-button {
+  color: green;
+  border: 1px solid green
 }
 
-.margin-top {
-  margin-top: 1em;
+/* Use Variables for Repeated Values */
+.header {
+  font: 400 15px/1.5 courier, monospace
 }
 
-.border-right {
-  border-right: 1px solid #000;
+.footer {
+  font: 400 15px/1.5 courier, monospace
 }
 
-.border-bottom {
-  border-bottom: 1px solid #000;
+/* Minimise Selector Depth */
+.container>.header .title {
+  color: green
 }
 
-.border-left {
-  border-left: 1px solid #000;
+/* Use Shorter Selector Names */
+.element-with-long-name {
+  color: green
 }
 
-.border-top {
-  border-top: 1px solid #000;
-}
 
-/* Minimize `@font-face` HTTP Requests */
-@font-face {
-  font-family: 'CustomFont';
-  src: url('Pilowlava-Atome.woff') format('woff'),
-       url('Pilowlava-Atome.woff2') format('woff2');
-  font-weight: 400;
+
+/* remove-redundancies */
+/* -------------------------------------------------------------------- */
+
+/* Remove Unnecessary Quotes from Fonts */
+h1 {
+  font-family: "Arial", sans-serif
 }
 
 /* Utilize HTML Tags for Styling Text */
-.bold {
-  font-weight: bold;
+h1 {
+  font-weight: bold
 }
 
-.italic {
-  font-style: italic;
+h2 {
+  font-style: italic
 }
 
-/* Special Characters vs Entities vs Unicode */
-.sum {
-  content: '&#8721;';
+
+
+/* shorten-properties */
+/* -------------------------------------------------------------------- */
+
+/* Combine Multiple of the Same Property Values on a Single Line */
+.image {
+  filter: grayscale(100%);
+  filter: blur(5px)
 }
 
-.copyright {
-  content: '&#169;';
+/* Combine Multiple of the Same Property Values with a Comma-Separated List */
+.element {
+  box-shadow: 1px 1px 2px #000;
+  box-shadow: inset 0 0 10px #000
 }
 
-.emoji {
-  content: '&#x1F4B0;';
+/* Shorthand Properties */
+/* Shorthand Properties - Margin and Padding */
+.margin-padding {
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  margin-left: 40px
+}
+
+/* Shorthand Properties - Simplify Typography Using the 'font' Shorthand Property */
+.font {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4
+}
+
+/* Shorthand Properties - Simplify 'border' */
+.border {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000
+}
+
+/* Shorthand Properties - Optimise 'text-decoration' */
+.text-decor {
+  text-decoration-line: underline;
+  text-decoration-style: dotted
+}
+
+/* Shorthand Properties - Simplify 'background' */
+.background {
+  background-color: #fff;
+  background-image: url('image.png');
+  background-repeat: no-repeat
+}
+
+/* Shorthand Properties - Optimise 'list-style' */
+.list {
+  list-style-type: disc;
+  list-style-position: inside
+}
+
+/* Shorthand Properties - Use 'overflow' Shorthand */
+.overflow {
+  overflow-x: hidden;
+  overflow-y: scroll
+}
+
+/* Shorthand Properties -Use 'flex' Shorthand */
+.flex {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto
+}
+
+/* Shorthand Properties - Use `grid` Shorthand */
+.grid {
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr
+}
+
+/* Shorthand Properties - Combine `place-items` */
+.place {
+  align-items: center;
+  justify-items: center
+}
+
+/* Shorthand Properties - Use `gap` in Grid and Flexbox */
+.gap {
+  grid-gap: 10px;
+  column-gap: 10px;
+  row-gap: 10px
+}
+
+/* Shorthand Properties - Use Shorter Animations */
+.animate {
+  transition-property: all;
+  transition-duration: 0.3s
+}
+
+/* Shorthand Properties - Use 'columns' Shorthand */
+.columns {
+  column-width: 200px;
+  column-count: 3
+}
+
+/* Using Shorthand Properties for Single-Side `border`, `margin`, and `padding` */
+/* Using Shorthand Properties - Padding Right */
+.paddding-right {
+  padding-right: 1em
+}
+
+/* Using Shorthand Properties - Padding Bottom */
+.paddding-bottom {
+  padding-bottom: 1em
+}
+
+/* Using Shorthand Properties - Padding Top */
+.paddding-top {
+  padding: 1em 0 0 0
+}
+
+/* Using Shorthand Properties - Margin Right */
+.margin-right {
+  margin-right: 1em
+}
+
+/* Using Shorthand Properties - Margin Bottom */
+.margin-bottom {
+  margin-bottom: 1em
+}
+
+/* Using Shorthand Properties - Margin Left */
+.margin-left {
+  margin-left: 1em
+}
+
+/* Using Shorthand Properties - Border Bottom */
+.border-bottom {
+  border-bottom: 1px solid #000
+}
+
+/* Using Shorthand Properties - Border Left */
+.border-left {
+  border: 0 0 0 1px solid #000
+}
+
+/* Using Shorthand Properties - Border Top */
+.border-top {
+  border: 1px 0 0 0 solid #000;
+}
+
+
+
+/* shorten-units */
+/* -------------------------------------------------------------------- */
+
+/* Use Hexadecimal Color Codes */
+h1 {
+  color: rgb(64, 232, 90)
+}
+
+/* Shorten Hex Colour Codes */
+a {
+  color: #ffffff
+}
+
+/* Use 'transparent' for Transparent Colors */
+.transparent {
+  background: rgba(0, 0, 0, 0)
+}
+
+/* Lower Unnecessary 'z-index' */
+.zindex {
+  z-index: 9999
+}
+
+/* Minimise '@font-face' HTTP Requests */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('custom-font.woff') format('woff'),
+    url('custom-font.woff2') format('woff2');
+  font-weight: 400
+}
+
+/* Minimise Decimal Values */
+.decimal {
+  margin: 0.5em
+}
+
+/* Minimise Zero Values */
+.zerovalue {
+  margin: 0px
+}
+
+/* Use Numerical Values for 'font-weight' */
+.fontweight {
+  font-weight: bold
+}
+
+/* Use `em` and 'rem' */
+.em {
+  padding: 16px
+}
+
+/* Use Shorter Units */
+.shorterunits {
+  width: 100px
+}
+
+/* Remove Unnecessary Units for 'line-height' */
+.lineheight {
+  line-height: 1.5em
+}
+
+
+
+/* use-special-characters */
+/* -------------------------------------------------------------------- */
+
+/* Special Characters vs Entites vs Unicode */
+/* Special Characters vs Entites vs Unicode - Sum (∑) */
+.sum::before {
+  content: '&sum;'
+}
+
+.sum::before {
+  content: '&#8721;'
+}
+
+/* Special Characters vs Entites vs Unicode -  Copyright Symbol (©) */
+.copyright::before {
+  content: '&copy;'
+}
+
+.right::before {
+  content: '&#169;'
+}
+
+/* Special Characters vs Entites vs Unicode -  Emoji (Newspaper 📰) */
+.newspaper::before {
+  content: '&#x1F4B0;'
 }
 
 /* Unicode Characters for Icons */
 .icon {
-  background-image: url('icon.svg');
-}
-
-/* Data URIs for Small Images */
-.logo {
-  background-image: url('logo.png');
+  background-image: url('icon.svg')
 }

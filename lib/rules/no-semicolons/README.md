@@ -1,4 +1,6 @@
-# Remove Semicolon at End of Lines
+## no-semicolons
+
+### Remove Semicolon at End of Lines
 
 **Guideline:** Avoid using semicolons at the end of CSS lines unless necessary.
 
@@ -7,10 +9,11 @@
 ```css
 /* Instead of this */
 h1 {
-  margin: 0;
+  color: green;
 }
 
 /* Use this */
 h1 { 
-  margin: 0
+  color: green
 }
+```
