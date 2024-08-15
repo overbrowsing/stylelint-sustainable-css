@@ -118,7 +118,7 @@ The development of this plugin's rules is ongoing, and we welcome your contribut
 
 - Create, improve, or debug rules (refer to Stylelint’s [Working on Rules Guide](https://github.com/stylelint/stylelint/blob/master/docs/developer-guide/rules.md)).
 - Enhance the documentation.
-- Engage with us via [issues](https://github.com/printerscanner/stylelint-sustainable-css/issues) and [pull requests](https://github.com/printerscanner/stylelint-sustainable-css/pulls).
+- Engage with us via [issues](https://github.com/overbrowsing/stylelint-sustainable-css/issues) and [pull requests](https://github.com/overbrowsing/stylelint-sustainable-css/pulls).
 - Propose new rules or improvements, and submit pull requests to demonstrate your ideas.
 - Add tests for any aspect of the project.
 - Optimise rule performance.
